@@ -1,0 +1,50 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/NAV
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-nav {
+  position: fixed;
+  top: 49px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  padding-top: spacer(2);
+  padding-right: spacer(4);
+  padding-left: spacer(4);
+  background-color: rgb(38, 38, 38);
+  transform: translateX(100%);
+  opacity: 1;
+  transition: all 400ms ease-in;
+
+  &.isActive {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &__link {
+    display: block;
+    padding: spacer(2) 0;
+    color: white;
+  }
+
+  @include bp(10) {
+    position: static;
+    padding: 0;
+    background-color: white;
+    transform: translateX(0);
+    opacity: 1;
+
+    &__list {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__link {
+      padding: 0 0 0 spacer(2);
+      color: black;
+    }
+  }
+}

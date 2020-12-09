@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "target": "es5",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "lib": ["dom", "esnext"],
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "baseUrl": "./src",
+    "paths": {
+      "components/*": ["./src/components"],
+      "pages/*": ["./src/components/pages"],
+      "sections/*": ["./src/components/sections"],
+      "shared/*": ["./src/components/shared"],
+      "styles/*": ["./src/styles"]
+    }
+  },
+  "include": ["./src/"],
+  "exclude": ["node_modules,", "build"]
+}

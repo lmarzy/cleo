@@ -1,2 +1,2 @@
-# cleo
-Cleo FE Tech Test
+# kickstart-react.ts
+Kickstarter for a React Typescript project

@@ -1,0 +1,31 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/HEADER
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-header {
+  padding-top: spacer(2);
+  padding-bottom: spacer(2);
+  border-bottom: 1px solid #ccc;
+
+  &__togglenav {
+    margin-left: auto;
+    font-size: 14px;
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    @include bp(10) {
+      display: none;
+    }
+  }
+
+  .c-container {
+    display: flex;
+  }
+
+  .c-nav {
+    margin-left: auto;
+  }
+}
