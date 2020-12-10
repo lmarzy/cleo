@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import { useApiRequest } from '../../../hooks';
 
-import { Container } from '../../shared';
+import { Container, Tabs, TabBody } from '../../shared';
 
 export const HomePage: FunctionComponent = (): ReactElement => {
   const { data, error, isLoaded } = useApiRequest(
@@ -13,7 +13,10 @@ export const HomePage: FunctionComponent = (): ReactElement => {
   return (
     <Container>
       <h1>Home Page</h1>
-      {data && data.map((item) => <div key={item.id}>{item.id}</div>)}
+      <Tabs items={['tab1', 'tab2']} activeTab={1}>
+        <TabBody>Tab 1</TabBody>
+        <TabBody>Tab 2</TabBody>
+      </Tabs>
     </Container>
   );
 };
