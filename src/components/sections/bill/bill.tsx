@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useState } from 'react';
-import { BillInterface, TransactionInterface } from '../../../shared/models';
+import { BillInterface } from '../../../shared/models';
 
 import { Button } from '../../shared';
 import { Transactions } from '..';

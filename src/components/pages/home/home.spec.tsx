@@ -7,7 +7,7 @@ describe('Home Page', () => {
   const { getByText } = render(<HomePage />);
 
   test('shows correct page title', () => {
-    const pageTitle = getByText('Home Page');
+    const pageTitle = getByText('Home');
     expect(pageTitle).toBeInTheDocument();
   });
 });
