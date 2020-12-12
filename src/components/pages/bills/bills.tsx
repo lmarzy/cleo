@@ -11,6 +11,7 @@ export const BillsPage: FunctionComponent = (): ReactElement => {
   const [bills, setBills] = useState<BillInterface[]>();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState();
+  const [activeTab, setActiveTab] = useState(0);
 
   const getBills = async () => {
     try {
@@ -25,8 +26,16 @@ export const BillsPage: FunctionComponent = (): ReactElement => {
   };
 
   const updateBill = async (id: string, isBill: boolean): Promise<void> => {
-    await API.updateBill(id, isBill);
-    getBills();
+    try {
+      setIsLoading(true);
+      await API.updateBill(id, isBill);
+      getBills();
+      setActiveTab(isBill ? 0 : 1);
+    } catch (error) {
+      console.log(error);
+      setError(error);
+    }
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -47,7 +56,10 @@ export const BillsPage: FunctionComponent = (): ReactElement => {
     <section>
       <PageTitle title="Bills" />
       <Container>
-        <Tabs items={[`Bills ${billType(true).length}`, `Transactions ${billType(false).length}`]} activeTab={0}>
+        <Tabs
+          items={[`Bills ${billType(true).length}`, `Transactions ${billType(false).length}`]}
+          activeTab={activeTab}
+        >
           <div>
             <Bills bills={billType(true)} updateBill={updateBill} />
           </div>

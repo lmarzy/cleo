@@ -1,12 +1,12 @@
 import { apiConstants } from '../shared/constants';
-import { services } from './services';
+import { request } from './request';
 
 import { BillInterface } from '../shared/models';
 
 const billsUrl = `${apiConstants.base}bills`;
 
 export const API = {
-  getBills: (): Promise<BillInterface[]> => services.get<BillInterface[]>(billsUrl),
-  updateBill: (id: string, isBill: boolean): Promise<BillInterface[]> =>
-    services.patch<BillInterface[]>(`${billsUrl}/${id}`, JSON.stringify({ isBill: !isBill })),
+  getBills: (): Promise<BillInterface[]> => request<BillInterface[]>(billsUrl),
+  updateBill: (id: string, isBill: boolean): Promise<BillInterface> =>
+    request<BillInterface>(`${billsUrl}/${id}`, 'PATCH', JSON.stringify({ isBill: !isBill })),
 };
