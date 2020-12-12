@@ -1,2 +1,3 @@
 export { Container } from './container/container';
-export { Tabs, TabBody } from './tabs';
+export { Tabs } from './tabs/tabs';
+export { Button } from './button/button';

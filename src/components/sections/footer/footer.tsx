@@ -7,7 +7,7 @@ import './footer.scss';
 export const Footer = (): ReactElement => (
   <footer className="c-footer">
     <Container>
-      <small>&copy; 2020 - React Apollo</small>
+      <small>&copy; 2020 - Cleo LM</small>
     </Container>
   </footer>
 );

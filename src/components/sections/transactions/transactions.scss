@@ -1,12 +1,19 @@
 // ========================================================================
-// COMPONENTS/SECTIONS/PAGE-TITLE
+// COMPONENTS/SECTIONS/TRANSACTIONS
 // ========================================================================
 
 @import '~sassHelpers';
 
-.c-page-title {
-  margin-bottom: spacer(4);
-  padding: spacer(2);
+.c-transactions {
   background: white;
-  border-bottom: 1px solid #ccc;
+  border: 1px solid color(grey2);
+
+  th,
+  td {
+    padding: spacer(1);
+  }
+
+  th {
+    border-bottom: 1px solid color(grey2);
+  }
 }

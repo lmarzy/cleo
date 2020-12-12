@@ -2,9 +2,16 @@
 // SETTINGS/COLOURS
 // ========================================================================
 
-// MAP
 $colors: (
-  a: black,
-  b: #f8f8f8,
-  c: #c8f0ed,
+  grey1: #f0f0f0,
+  grey2: #c2c2c2,
+  grey3: #505050,
+  blue-primary: #0066ea,
+  blue-light: #94c3ff,
+  blue-dark: #193861,
+  orange-primary: #fd9859,
 );
+
+// page
+$col-bg: map-get($colors, grey1);
+$col-text: map-get($colors, grey3);

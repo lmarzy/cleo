@@ -1,0 +1,53 @@
+// ========================================================================
+// COMPONENTS/SHARED/BUTTON
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  height: spacer(6);
+  padding-left: spacer(3);
+  padding-right: spacer(3);
+  justify-content: center;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: $border-radius;
+  transition: all 0.1s ease-in;
+
+  &:hover,
+  &:focus {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+
+  &:focus {
+    outline: 1px dashed var(--primary);
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+      transform: none;
+    }
+  }
+
+  &--primary,
+  &--secondary {
+    color: white;
+  }
+
+  &--primary {
+    background-color: color(blue-primary);
+  }
+
+  &--secondary {
+    background-color: color(orange-primary);
+  }
+}

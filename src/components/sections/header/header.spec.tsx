@@ -12,7 +12,7 @@ describe('Header Component', () => {
       </BrowserRouter>,
     );
 
-    expect(getByText('React Apollo')).toBeInTheDocument();
+    expect(getByText('Cleo - Bills')).toBeInTheDocument();
   });
 
   test('toggles site navigation', () => {
