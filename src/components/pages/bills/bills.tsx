@@ -57,7 +57,7 @@ export const BillsPage: FunctionComponent = (): ReactElement => {
       <PageTitle title="Bills" />
       <Container>
         <Tabs
-          items={[`Bills ${billType(true).length}`, `Transactions ${billType(false).length}`]}
+          items={[`Bills ${billType(true).length}`, `Potential Bills ${billType(false).length}`]}
           activeTab={activeTab}
         >
           <div>
